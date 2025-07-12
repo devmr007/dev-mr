@@ -12,22 +12,33 @@
 <body>
     <header>
         <nav class="headers">
-            <div class="leftnav">
+            <!-- Mobile layout container -->
+            <div class="mobile-header">
+              <div class="leftnav">
                 <a href="#">
-                    <img src="https://ext.same-assets.com/1019728452/13125778.png" alt="Logo"
-                        style="width: 52px;height: 52px;" width="52" height="52">
+                  <img src="images/inverlogo.png" alt="Logo" style="width: 52px; height: 52px;">
                 </a>
+              </div>
+              <!-- Hamburger / Close toggle -->
+              <div class="menu-toggle" id="menu-toggle">
+                <span class="menu-icon" id="menu-icon">&#9776;</span> <!-- ☰ -->
+                <span class="close-icon" id="close-icon" style="display: none;">&times;</span> <!-- ✖ -->
+              </div>
             </div>
-            <div class="rightnav">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact Me</a></li>
-                    <li><a href="#about">About Me</a></li>
-                </ul>
+          
+            <!-- Actual navigation list -->
+            <div class="rightnav" id="nav-menu">
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+                <li><a href="#about">About Me</a></li>
+              </ul>
             </div>
-        </nav>
-    </header>
+          </nav>
+          
+      </header>
+      
     <main class="mainly">
         <div class="main-wrapper">
             <div class="maindiv">
@@ -39,34 +50,34 @@
                 <div class="bio">
                     <div class="bio-name">Musfikur Rahman</div>
                     <div class="bio-title">Android App Developer</div>
-                    <span id="element" class="typewriter">Kotlin | Java | Flutter | Android Studio</span>
+                    <span id="element" class="typewriter"> Kotlin | Java | Flutter | Android Studio </span>
                 </div>
             </div>
         </div>
     </main>
 
     <footer class="foot">
-        <a class="icon" href="#" target="_blank">
-            <img src="https://ext.same-assets.com/1019728452/663207012.png" alt="Facebook" width="28" height="28">
+        <a class="icon" href="https://www.facebook.com/musfikurrahmanosham" target="_blank">
+            <img src="images/facebook.png" alt="Facebook" width="28" height="28">
             <span>Facebook</span>
         </a>
-        <a class="icon" href="#" target="_blank">
-            <img class="icon" src="https://ext.same-assets.com/1019728452/3081714706.png" alt="LinkedIn" width="28"
+        <a class="icon" href="https://www.linkedin.com/in/musfikur-rahman-89439b25a/" target="_blank">
+            <img class="icon" src="images/linkedin.png" alt="LinkedIn" width="28"
                 height="28">
             <span>LinkedIn</span>
         </a>
-        <a class="icon" href="mailto:your-email@gmail.com" target="_blank">
-            <img class="icon" src="https://ext.same-assets.com/1019728452/2729632090.png" alt="Gmail" width="27"
+        <a class="icon" href="mailto:musfikr589@gmail.com" target="_blank">
+            <img class="icon" src="images/gmail.png" alt="Gmail" width="27"
                 height="28">
             <span>Gmail</span>
         </a>
-        <a class="icon" href="#" target="_blank">
-            <img class="icon" src="https://ext.same-assets.com/1019728452/1227284282.png" alt="WhatsApp" width="28"
+        <a class="icon" href="https://wa.me/+8801756575046" target="_blank">
+            <img class="icon" src="images/whatsapp.png" alt="WhatsApp" width="28"
                 height="28">
             <span>WhatsApp</span>
         </a>
-        <a class="icon" href="#" target="_blank">
-            <img class="icon" src="https://ext.same-assets.com/1019728452/2857803257.png" alt="Telegram" width="28"
+        <a class="icon" href="https://t.me/musfikurrahmanosham" target="_blank">
+            <img class="icon" src="images/telegram.png" alt="Telegram" width="28"
                 height="28">
             <span>Telegram</span>
         </a>
@@ -82,6 +93,21 @@
     <script crossorigin="anonymous" src="//unpkg.com/same-runtime/dist/index.global.js"></script>
     <script type="module" src="main.ts"></script>
     <script src="main.js"></script>
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const navMenu = document.getElementById("nav-menu");
+        const menuIcon = document.getElementById("menu-icon");
+        const closeIcon = document.getElementById("close-icon");
+      
+        menuToggle.addEventListener("click", () => {
+          navMenu.classList.toggle("active");
+      
+          const isOpen = navMenu.classList.contains("active");
+          menuIcon.style.display = isOpen ? "none" : "inline";
+          closeIcon.style.display = isOpen ? "inline" : "none";
+        });
+      </script>
+      
 </body>
 
 </html>
