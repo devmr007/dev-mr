@@ -123,6 +123,7 @@ header {
   margin: 32px 2vw;
   text-align: center;
   animation: fadeIn 1.8s ease;
+  min-height: 160px;
 }
 
 @keyframes fadeIn {
@@ -158,8 +159,8 @@ header {
 
 .typewriter {
   color: #ed05a7;
-  font-size: 1.1rem;
-  font-weight: 500;
+  font-size: 1.25rem;
+  font-weight: 900;
   letter-spacing: 0.08em;
   margin-top: 10px;
   display: inline-block;
