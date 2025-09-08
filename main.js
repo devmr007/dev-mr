@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Typewriter effect for tagline/skills
     const el = document.getElementById('element');
     if (!el) return;
-    const words = ['Kotlin', 'Java', 'Flutter', 'Android Studio', 'UI/UX Design', 'Firebase'];
+    const words = ['Flutter', 'Java', 'Kotlin', 'Api Integration', 'UI/UX Design', 'Firebase',];
     let wordIndex = 0, letterIndex = 0, typing = true;
   
     function type() {
