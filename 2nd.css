@@ -84,6 +84,7 @@ header {
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
+  
 }
 
 .maindiv {
@@ -348,3 +349,52 @@ footer.foot {
   }
 
 }
+
+
+/* ===================== Contact Form Responsiveness ===================== */
+
+form input,
+form textarea,
+form button {
+  width: 100%; /* always take full width of container */
+  box-sizing: border-box; /* include padding and border in width */
+}
+
+.mainleftdiv {
+  text-align: left; /* better alignment for form on small screens */
+}
+
+@media (max-width: 768px) {
+  .mainleftdiv {
+    max-width: 95vw; /* make sure it never overflows */
+    padding: 1rem 0.8rem; /* smaller padding on mobile */
+    margin: 1rem auto; /* center it */
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  form button {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+}
+
+/* Optional: avoid horizontal scroll */
+body, html {
+  overflow-x: hidden;
+}
+
+/* Make form placeholders use the global font */
+input::placeholder,
+textarea::placeholder {
+  font-family: 'Poppins', Arial, sans-serif;
+  color: #888; /* optional: slightly grey for better look */
+  font-weight: 400; /* optional: match body text weight */
+  font-size: 1rem; /* optional: adjust size */
+}
+
+
